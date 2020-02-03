@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="calcular_modelo_action" name="modelo"
+                     res_model="calcular.modelo" />
+
+         <menuitem name="calcular" id="calcular_modelo_action" action="calcular_modelo_action"  sequence="17"/>
+
+
+        <record id="calcular_modelo_view_tree" model="ir.ui.view">
+            <field name="name">Sumatorias</field>
+            <field name="model">calcular.modelo</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="numero1" />
+                    <field name="numero2" />
+                    <field name="numero3" />
+                    <field name="total" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="calcular_modelo_view_form" model="ir.ui.view">
+            <field name="name">CONJUNTO SUMAS</field>
+            <field name="model">calcular.modelo</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                    <field name="numero1" />
+                    <field name="numero2" />
+                        <field name="numero3" />
+                    <field name="total" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="calcular_modelo_view_search" model="ir.ui.view">
+            <field name="name">Buscar Suma</field>
+            <field name="model">calcular.modelo</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="numero1" />
+                    <field name="numero2" />
+                         <field name="numero3" />
+                    <field name="total" />
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>
